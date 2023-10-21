@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seoyeon's Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hobby.jpg);
+        }
+
+        .box .head {
+            width: 85%;
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box .head h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .box .nav ul li {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .box .nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .box .nav ul li a:hover {
+            color: darkturquoise;
+        }
+
+        .box .main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .box .main h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            color: floralwhite;
+        }
+
+        .box .main p {
+            font-size: 22px;
+        }
+
+        #b1{
+            background-color: ghostwhite;
+            border: 2px solid darkturquoise;
+            color: darkturquoise;
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin: 10px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        button {
+        background-color: darkturquoise;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <h1><a href="webpage.html">Seo Yeon's Web</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="trip.html">여행</a></li>
+                    <li><a href="photo.html">사진</a></li>
+                    <li><a href="movie.html">영화&amp;드라마 보기</a></li>
+                    <li><a href="music.html">음악 듣기</a></li>
+                    <li><a href="tutoring.html">튜터링</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h2>Hobby</h2>
+            <p>제 취미 활동에는 여행, 사진, 영화&amp;드라마 보기<br>음악 듣기, 튜터링이 있습니다.<br><br>자세한 내용이 궁금하시다면, 위에 메뉴를 클릭해주세요.
+                <br><br> 아래에 저의 웹 사이트를 둘러보시고 의견을 남겨주세요!
+            </p>
+            <br>
+            <form method="get">
+                <textarea name="comments" rows="5" cols="60"></textarea>
+                <br>
+                <input id="b1" type="button" value="등록" />
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("b1").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            var comments = document.getElementsByName("comments")[0].value;
+            var commentSection = document.createElement("div");
+            var commentText = document.createTextNode(comments);
+            commentSection.appendChild(commentText);
+
+            var deleteButton = document.createElement("button");
+            deleteButton.innerHTML = "삭제";
+            deleteButton.addEventListener("click", function() {
+                commentSection.remove();
+            });
+            commentSection.appendChild(deleteButton);
+            document.querySelector(".main").appendChild(commentSection);
+
+            document.getElementsByName("comments")[0].value = '';
+        });
+
+    </script>
+
+</body>
+
+</html>

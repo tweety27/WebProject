@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .box .head {
+            width: 85%;
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box .head h1 a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .box .nav ul li {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .box .nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .box .nav ul li a:hover {
+            color: darkturquoise;
+        }
+
+        .box .main {
+            position: relative;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .box .main h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .box .main p {
+            font-size: 22px;
+        }
+
+        .box .main .home {
+            font-size: 10px;
+        }
+
+        .box .content {
+            justify-content: center;
+            margin-top: 20px;
+            width: 80%;
+            height: 520px;
+            margin: 10px;
+            margin-top: 100px;
+        }
+
+        .box .content .music {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .box .content img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .box .content p {
+            padding-left: 30px;
+            padding-top: 78px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <h1><a href="index.html">Seo Yeon's Web</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="trip.html">여행</a></li>
+                    <li><a href="photo.html">사진</a></li>
+                    <li><a href="movie.html">영화&amp;드라마 보기</a></li>
+                    <li><a href="music.html">음악 듣기</a></li>
+                    <li><a href="tutoring.html">튜터링</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h2>Music</h2>
+            <p>저는 음악 듣는 것을 좋아합니다. <br> 기분, 날씨 등에 맞춰 음악을 듣다보면 더 풍부한 감정을 느낄 수 있기 때문입니다.<br>
+                <br>아래에 제가 고른 음악들이 있습니다.
+            </p>
+            <p class="home"><br>* 홈으로 돌아가고 싶으시다면 위의 Seo Yeon's Web을 클릭해주세요.</p>
+        </div>
+        <div class="content">
+            <div class="music">
+                <img src="img/song1.jpg">
+                <p>LE SSERAFIM<br>
+                    - UNFORGIVEN
+                    <br><br>
+                    <audio controls src="song/song1.mp3">음악이 재생되지 않습니다.</audio>
+                </p>
+            </div>
+            <div class="music">
+                <img src="img/song2.jpg">
+                <p>윤지영<br>
+                    - 우우우린
+                    <br><br>
+                    <audio controls src="song/song2.mp3">음악이 재생되지 않습니다.</audio>
+                </p>
+            </div>
+            <div class="music">
+                <img src="img/song3.jpg">
+                <p>그래쓰 &#40;GRASS&#41;<br>
+                    - 오늘은 맑음
+                    <br><br>
+                    <audio controls src="song/song3.mp3">음악이 재생되지 않습니다.</audio>
+                </p>
+            </div>
+        </div>
+    </div>
+</body></html>

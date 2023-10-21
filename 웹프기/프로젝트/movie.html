@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .box .head {
+            width: 85%;
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box .head h1 a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .box .nav ul li {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .box .nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .box .nav ul li a:hover {
+            color: darkturquoise;
+        }
+
+        .box .main {
+            position: relative;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .box .main h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .box .main p {
+            font-size: 22px;
+        }
+
+        .box .main .home {
+            font-size: 10px;
+        }
+
+        .box .content {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .box .content img {
+            width: 400px;
+            height: 520px;
+            margin: 10px;
+            margin-top: 100px;
+        }
+
+        .box .movie {
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .box .movie .movietitle {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 20px;
+            font-style: oblique;
+        }
+
+        .box .movie .youtube iframe {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <h1><a href="index.html">Seo Yeon's Web</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="trip.html">여행</a></li>
+                    <li><a href="photo.html">사진</a></li>
+                    <li><a href="movie.html">영화&amp;드라마 보기</a></li>
+                    <li><a href="music.html">음악 듣기</a></li>
+                    <li><a href="tutoring.html">튜터링</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h2>Movie&amp;Drama</h2>
+            <p>저는 영화나 드라마 보는 것을 좋아합니다. <br> 잠시나마 주인공이 된 거 같은 기분이 들기 때문입니다. <br><br>아래에 제가 고른 총 3개의 영화와 드라마가 있습니다.</p>
+            <p class="home"><br>* 홈으로 돌아가고 싶으시다면 위의 Seo Yeon's Web을 클릭해주세요.</p>
+        </div>
+        <div class="content">
+            <img src="img/La%20La%20Land.JPG">
+            <img src="img/notebook.jpg">
+            <img src="img/drama.jpeg">
+        </div>
+        <div class="movie">
+            <div class="movietitle">La La Land 다시 보기</div>
+            <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vLz6sGLpA0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="movie">
+            <div class="movietitle">NOTEBOOK 다시 보기</div>
+            <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YmNXnSuH2p8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="movie">
+            <div class="movietitle">미스터 션사인 다시 보기</div>
+            <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4fFnzpJl0IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .box .head {
+            width: 85%;
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box .head h1 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .box .nav ul li {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .box .nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .box .nav ul li a:hover {
+            color: darkturquoise;
+        }
+
+        .box .main {
+            position: relative;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .box .main h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .box .main p {
+            font-size: 22px;
+        }
+
+        .box .main .home {
+            font-size: 10px;
+        }
+
+        .box .content {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .box .content img {
+            width: 400px;
+            height: 520px;
+            margin: 10px;
+            margin-top: 100px;
+            display: none;
+        }
+
+        .box .prev,
+        .box .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .box .prev {
+            left: 10px;
+        }
+
+        .box .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <h1><a href="index.html">Seo Yeon's Web</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="trip.html">여행</a></li>
+                    <li><a href="photo.html">사진</a></li>
+                    <li><a href="movie.html">영화&amp;드라마 보기</a></li>
+                    <li><a href="music.html">음악 듣기</a></li>
+                    <li><a href="tutoring.html">튜터링</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h2>Trip</h2>
+            <p>저는 여행 하는 것을 좋아합니다. <br> 잠시나마 일상에서 벗어날 수 있기 때문입니다. <br><br>아래에 저의 여행 사진이 있습니다.</p>
+            <p class="home"><br>* 홈으로 돌아가고 싶으시다면 위의 Seo Yeon's Web을 클릭해주세요.</p>
+        </div>
+        <div class="content">
+            <img src="img/guam2.jpg">
+            <img src="img/guam1.JPG">
+            <img src="img/dokyo.JPG">
+            <div class="prev">&#10094;</div>
+            <div class="next">&#10095;</div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("content")[0].getElementsByTagName("img");
+            var prev = document.getElementsByClassName("prev")[0];
+            var next = document.getElementsByClassName("next")[0];
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            prev.addEventListener("click", function() {
+                slideIndex--;
+                if (slideIndex < 1) {
+                    slideIndex = slides.length;
+                }
+                showSlides();
+            });
+
+            next.addEventListener("click", function() {
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                showSlides();
+            });
+
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body></html>
+
